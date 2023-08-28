@@ -5,7 +5,7 @@ let salaries = {
 }
 let sum = 0;
 for (let key in salaries) {
-    console.log(salaries[key])
+    console.log(salaries[key])  //TODO key  -> JohnAnnPeter
     sum += salaries[key]
 }
 console.log(sum)

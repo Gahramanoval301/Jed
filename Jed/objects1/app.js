@@ -6,6 +6,6 @@ const leman = {
         console.log("Hello leman")
     }
 }
-leman.sayHi();
-console.log(leman.age);
-console.log(leman)
+leman.sayHi(); // Hello leman
+console.log(leman.age); // 18
+console.log(leman);

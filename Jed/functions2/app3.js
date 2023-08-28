@@ -6,5 +6,5 @@ const makeFormalFactory = (cins) => {
 }
 const forMan = makeFormalFactory('K')
 const forWoman = makeFormalFactory('Q')
-console.log(forMan('aga'))
-console.log(forWoman('leman'))
+console.log(forMan('aga')) // Hi, mr aga
+console.log(forWoman('leman')) // Hi, ms leman

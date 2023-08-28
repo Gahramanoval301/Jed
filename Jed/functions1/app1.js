@@ -20,5 +20,5 @@ function calculator(num1, num2, operator) {
     }
 }
 
-calculator(1, 4, '+')
-calculator(2, 5, '-')
+calculator(1, 4, '+');
+calculator(2, 5, '-');
