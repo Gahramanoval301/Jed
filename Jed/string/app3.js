@@ -5,7 +5,9 @@ function engToAzV12(str) { //ms - > cenab
     if (xitab.toLowerCase() == 'mr.') {
         azForm = str.replace(xitab, 'cenab')
     }
-    if (xitab.toLowerCase() == 'ms.') { azForm = str.replace(xitab, 'xanim'); }
+    if (xitab.toLowerCase() == 'ms.') {
+        azForm = str.replace(xitab, 'xanim');
+    }
     return `${azForm}`
 }
 

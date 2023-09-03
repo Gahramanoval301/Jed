@@ -1,14 +1,18 @@
 function makeAbbr(str) {
-    let basherf = str[0].toUpperCase();
-    let netice = basherf;
-    let pos = 0;
-    let foundsPos = '';
-    while (true) {
-        foundsPos = str.indexOf(' ', pos);
-        if (foundPos == -1) break;
-        pos = foundPos + 1;
+    str = str.trim();
+    let abbr = str[0].toUpperCase();
+    for (let i = 1; i < str.length; i++) {
+        if (str[i] == ' ') {
+            if (str[i + 1] == ' ') {
+                continue;
+            }
+            abbr += str[i + 1].toUpperCase();
+        }
     }
-
+    //abbr.replaceAll(' ' , '' );
+    return abbr;
 }
 
-console.log(makeAbbr('salam dzzzdsd'))
+console.log(makeAbbr('dovlet Tehlukesizlik agentliyi'))
+console.log(makeAbbr('dovlet Tehlukesizlik agentliyi      '))
+console.log(makeAbbr('dovlet Tehlukesizlik    agentliyi      '))
