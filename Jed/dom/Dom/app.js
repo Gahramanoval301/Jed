@@ -1,25 +1,32 @@
 const input = document.getElementById("todo-input");
 const createBtn = document.querySelector("#create-btn");
 const todos = document.querySelector(".todos");
-
 const heading = document.getElementById("heading");
 
 createBtn.onclick = () => {
-  if (input.value === "") {
-    alert("Zəhmət olmasa, birseyler yazin! tenbel olma!");
-    return;
-  }
-  const div = document.createElement("div");
-  // div.classList.add("open");
-  div.className = "single-todo";
-
-  const p = document.createElement("p");
-  p.textContent = input.value;
+  //TODO elements are created
 
   const buttonContainer = document.createElement("div");
+  const div = document.createElement("div");
+  div.className = "single-todo"; //class name verdik
+  const p = document.createElement("p");
   const closeBtn = document.createElement("button");
+
+  //TODO checks the input! 
+  if (input.value === "") {
+    alert("Zəhmət olmasa, birseyler yazin! tenbel olma!");
+    return; //if den cixsin 
+  }
+  // div.classList.add("open"); //bele de elave ede bilerik
+
+  //! Valueler menimsedirik
+  //TODO inputda yazdigimiz p elementine kocurulsun:
+  p.textContent = input.value;
+
+  //TODO closebtn contenti :
   closeBtn.textContent = "❌";
 
+  //TODO clobtn'a clickleyende ne bas versin?
   closeBtn.onclick = () => {
     if (confirm("qaqa heqiqeten silmek isteyirsen?")) {
       let counter = 1;
@@ -48,9 +55,9 @@ createBtn.onclick = () => {
     p.textContent = newValue;
   };
 
+  //appendler
   buttonContainer.append(closeBtn, editBtn);
   div.append(p, buttonContainer);
-
   todos.append(div);
 
   //   ux -> user experience
@@ -58,6 +65,7 @@ createBtn.onclick = () => {
 };
 
 function getRandomLetter() {
+
   const randomNumBetween65And90 = 65 + Math.floor(Math.random() * 26);
 
   if (randomNumBetween65And90 % 2 === 0) {
