@@ -1,0 +1,15 @@
+.todo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.single-todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  width: 50%;
+}
