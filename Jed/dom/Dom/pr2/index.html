@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .user-container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        margin: 5px;
+
+
+    }
+
+    .single-user {
+        display: flex;
+        padding: 10px 15px;
+        justify-content: space-between;
+        border: 1px solid;
+        border-radius: 4px;
+        min-width: 250px;
+        margin-bottom: 10px;
+
+    }
+</style>
+
+<body>
+    <div class="user-container">
+        <h1>Users</h1>
+        <div class="users">
+            <div class="single-user">
+                <p>(user name)</p>
+                <div id="buttons">
+                    <button class="edit-btn">edit it😎</button>
+                    <button class="remove-btn">x</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+
+</body>
+
+</html>
