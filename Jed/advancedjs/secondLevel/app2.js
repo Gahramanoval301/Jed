@@ -35,9 +35,22 @@ console.log(array1.sortNumbers());
 
 
 Array.prototype.sortStudentMark = function () {
-    let array = this;
-    return array.sort((a, b) => b.mark - a.mark)
+    return [...this].sort((a, b) => b.mark - a.mark).map((obj) => obj.ad)
 
 }
-const students = [{ ad: 'Ali', mark: 99.9 }, { ad: 'Nail', mark: 40 }, { ad: 'Lale', mark: 100 }]
+
+const students = [{ ad: 'Ali', mark: 99 }, { ad: 'Nail', mark: 40 }, { ad: 'Lale', mark: 100 }]
 console.log(students.sortStudentMark());
+
+
+Number.prototype.showDividers = function () {
+    let dividers = [1];
+    for (let i = 2; i <= this / 2; i++) {
+        if (this % i === 0) dividers.push(i)
+    }
+    dividers.push(this / 1)//* +this
+    return dividers;
+}
+let ed = 12;
+console.log(ed.showDividers())
+
